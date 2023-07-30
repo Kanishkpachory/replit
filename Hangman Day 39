@@ -1,0 +1,34 @@
+import random 
+print("🌟Hangman🌟")
+print()
+listofword=["animal","orange","mangoes"]
+picked=[]
+count=6
+word=random.choice(listofword)
+while True:
+  letter=input("choose a letter :").lower()
+  if letter in picked:
+    print("You have already tried")
+  picked.append(letter)
+  if letter in word:
+    print("You found a letter ")
+  else:
+    print("nope not in there")
+    count-=1
+  letters=True
+  print()
+  for i in word:
+    if i in picked:
+      print(i,end="")
+    else:
+      print("_",end="")
+      letters=False
+    print()
+  if letters:
+    print(f"you have won the game with {count} left !")
+    break
+  if count<=0:
+    print(f"You ran out of lives! the correct answer is {word} ")
+    break
+  else:
+    print(f"only {count} left")
