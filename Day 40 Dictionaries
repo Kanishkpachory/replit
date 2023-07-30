@@ -1,0 +1,6 @@
+print("🌟Contact Card🌟\n")
+
+myUser={"name":input("what's your name :"),"DOB":input("\nwhat's your DOB :"),"tel":input("\nInput your telephone number :"),"email":input("\nInput your email :"),"address":input("\nInput your address :")}
+
+print()
+print(f"""Hi {myUser["name"]}. Our dictionary says that you were born on {myUser['DOB']}, we can call you on {myUser['tel']}, email {myUser['email']}, or write to {myUser['address']}""")
