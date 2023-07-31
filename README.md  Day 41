@@ -1,0 +1,9 @@
+# replit
+print("🌟Website Rating🌟")
+website={"name":None ,"URL":None ,"description":None ,"rating":None}
+for name in website.keys():
+  website[name]=input(f"Enter the {name}:")
+print()
+for name,value in website.items():
+  print(f"{name}: {value}")
+  #print(f"name :{name}: {value}, URL :{website['URL']} , description :{website['description']} , rating :{website['rating']}")
