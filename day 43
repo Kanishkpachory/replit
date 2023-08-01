@@ -1,0 +1,19 @@
+import random
+print("\033[33m Davisd's Nan's Bingo Card Generator\n",end="")
+bingo=[]
+def ran():
+  number=random.randint(0,90)
+  return number
+def play():
+  for row in bingo:
+    print(row)
+var=[]
+for i in range(8):
+  var.append(ran())
+
+var.sort()
+#print(var)
+
+bingo=[[var[0],var[1],var[2]],[var[3],"BINGO",var[4]],[var[5],var[6],var[7]]]
+print(bingo)
+play()
