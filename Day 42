@@ -1,0 +1,20 @@
+print("👾 MokéBeast - The Non-Copyright Generic Beast Battle Game 👾\n")
+info={"beast_name":None , "beast_type":None ,"beast_special_move":None ,"beast_starting_HP":None ,"beast_starting_MP":None}
+for name in info:
+  info[name]=input(f"Input your {name} :")
+
+def move():
+  if info["beast_type"]=="fire":
+    print(f"\033[31m",end="")#red
+  elif info["beast_type"]=="water":
+    print(f"\033[34m",end="")#blue
+  elif info["beast_type"]=="air":
+    print(f"\033[37m",end="")#white
+  elif info["beast_type"]=="earth":
+    print(f"\033[32m",end="")#green
+  elif info["beast_type"]=="spirit":
+    print(f"\033[36m",end="")#cyan
+
+move()
+print()
+print(f"Your beast is called {info['beast_name']}. It is an {info['beast_type']} with a special move of {info['beast_special_move']} .")
