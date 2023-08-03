@@ -1,0 +1,52 @@
+import random, os, time
+
+bingo = []
+
+def ran():
+  number = random.randint(0,90)
+  return number
+
+def prettyPrint():
+  for row in bingo:
+    for item in row:
+      print(item, end="\t|\t")
+    print()
+
+def createCard():
+  global bingo
+  var = []
+  for i in range(8):
+    num = ran()
+    while num in var:
+      num = ran()
+    var.append(ran())
+  
+  var.sort()
+  print(var)
+  bingo = [ [ var[0], var[1], var[2]],
+            [ var[3], "BG", var[4] ],
+            [ var[5], var[6], var[7]]
+          ]
+
+createCard()
+while True:
+  prettyPrint()
+  num = int(input("Next Number: "))
+  for row in range(3):
+    for item in range(3):
+      if bingo[row][item] == num:
+        bingo[row][item] = "X"
+
+  exes = 0
+  for row in bingo:
+    for item in row:
+      if item=="X":
+        exes+=1
+
+  if exes == 8:
+    print("You have won")
+    break
+
+  time.sleep(1)
+  os.system("clear")
+
