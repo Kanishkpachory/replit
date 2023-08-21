@@ -1,0 +1,72 @@
+import time,os
+print("🌟Life Organizer🌟\n")
+todo=[]
+def add():
+  time.sleep(1)
+  os.system("clear")
+  add=input("What is the task? >")
+  date=input("When is it due by? >")
+  pri=input("What is the priority? >")
+  row=[add , date , pri]
+  todo.append(row)
+  os.system("clear")
+def view():
+  time.sleep(1)
+  os.system("clear")
+  option=input("For All :1 \n By priority :2 \n >")
+  if option=="1":
+    for row in todo:
+      for item in row:
+        print(item, end=" | ")
+        print()
+  else:
+    pri=input("What Priority >")
+    for row in todo:
+      if pri in row:
+        for item in row:
+          print(item,end=" | ")
+          print()
+
+def edit():
+  time.sleep(1)
+  os.system("clear")
+  find=input("Name of todo to edit :")
+  found=False
+  for row in todo:
+    if find in row:
+      found=True
+  if not found:
+    print("couldn't find that")
+    return
+  for row in todo:
+    if find in row:
+      todo.remove(row)
+  add=input("What is the task? >")
+  date=input("When is it due by? >")
+  pri=input("What is the priority? >")
+  row=[add,date,pri]
+  todo.append(row)
+  print("Updated")
+  
+def remove():
+  time.sleep(1)
+  os.system("clear")
+  find=input("name of todo want to remove >")
+  for row in todo:
+    if find in row:
+      todo.remove(row)
+  
+
+
+
+while True:
+  item=input("\nWelcome to the life organizer. Do you want to add, view, edit or remove a to do? >")
+  if item=="add":
+   add()
+  elif item=="view":
+    view()
+  elif item=="edit":
+    edit()
+  elif item=="remove":
+    remove()
+  
