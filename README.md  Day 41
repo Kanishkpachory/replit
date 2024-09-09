@@ -3,7 +3,7 @@
 ## Overview
 This repository contains solutions and projects from Day 38 to Day 46 of my Python learning journey. Each day's code explores different topics, ranging from basic data structures like dictionaries to small projects like the Hangman game.
 
-### Table of Contents
+## Table of Contents
 - [Day 38: Project/Topic Title](#day-38-projecttopic-title)
 - [Day 39: Hangman Game](#day-39-hangman-game)
 - [Day 40: Dictionaries](#day-40-dictionaries)
@@ -13,6 +13,9 @@ This repository contains solutions and projects from Day 38 to Day 46 of my Pyth
 - [Day 44: Project/Topic Title](#day-44-projecttopic-title)
 - [Day 45: Project/Topic Title](#day-45-projecttopic-title)
 - [Day 46: Project/Topic Title](#day-46-projecttopic-title)
+- [How to Run the Code](#how-to-run-the-code)
+- [Contributing](#contributing)
+- [License](#license)
 
 ---
 
@@ -27,45 +30,6 @@ This repository contains solutions and projects from Day 38 to Day 46 of my Pyth
 **Files**:
 - `hangman.py`: Contains the game logic and code for running the Hangman game.
 
----
-
-## Day 40: Dictionaries
-**Description**: Explored Python dictionaries, a data structure that stores key-value pairs. Worked on various operations like adding, updating, deleting, and searching within dictionaries.
-
----
-
-## Day 41: Project/Topic Title
-**Description**: Brief summary of the concept or project.
-
----
-
-## Day 42: Project/Topic Title
-**Description**: Brief summary of the concept or project.
-
----
-
-## Day 43: Project/Topic Title
-**Description**: Brief summary of the concept or project.
-
----
-
-## Day 44: Project/Topic Title
-**Description**: Brief summary of the concept or project.
-
----
-
-## Day 45: Project/Topic Title
-**Description**: Brief summary of the concept or project.
-
----
-
-## Day 46: Project/Topic Title
-**Description**: Brief summary of the concept or project.
-
----
-
-## How to Run the Code
-1. Clone this repository:
-   ```bash
-   git clone <repository-url>
-   cd <repository-directory>
+**How to Run**:
+```bash
+python hangman.py
